@@ -117,13 +117,13 @@ nav li a {
 	width: 100%;
 }
 
-.feature-video .img-col-right {
+.feature-video .img-col-wrapper-right {
 	position: absolute;
 	top: 70%;
 	left: 40%;
 }
 
-.feature-video .img-col-left {
+.feature-video .img-col-wrapper-left {
 	position: absolute;
 	top: 70%;
 	right: 40%;
