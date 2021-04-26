@@ -129,6 +129,47 @@ nav li a {
 	right: 40%;
 }
 
+/* Footer */
+.clients-slider {
+	padding-right: 40px;
+}
+
+.clients-slider img {
+	width: 100%;
+}
+
+.clients-slider .slick-slide {
+	margin: 15px;
+}
+
+.slick-prev::before {
+	display: none;
+}
+
+/* .slick-next:before {
+	content: '';
+	font-size: 50px;
+	font-weight: 800;
+} */
+
+.slick-next:before {
+	content: '\f054';
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	font-size: 50px;
+	opacity: 1;
+}
+
+.slick-next {
+	right: 20px;
+}
+
+.clients-slider .item:hover {
+	display: block;
+	transition: all ease 0.3s;
+	transform: scale(1.1) translateY(-5px);
+}
+
 /* Utilities */
 .container {
 	max-width: 2000px;
