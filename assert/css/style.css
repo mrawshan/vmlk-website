@@ -129,6 +129,70 @@ nav li a {
 	right: 40%;
 }
 
+/* Section our-work */
+.our-work h1 {
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 30px;
+	font-size: 4rem;
+	font-weight: 600;
+}
+
+.our-work .heading-wrapper {
+	width: fit-content;
+	margin: auto;
+}
+
+.our-work ul > li {
+	display: inline;
+	margin: 30px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+/* Bottom line for active headdings */
+.heading-wrapper ul {
+	position: relative;
+}
+
+.bottom-line {
+	position: absolute;
+	left: 27px;
+	width: 48px;
+	height: 3px;
+	background-color: white;
+	border-radius: 25px;
+}
+
+.bottom-active {
+	transform: translate3d(0%, 0, 0);
+	transition: all linear 240ms;
+}
+
+.bottom-active1 {
+	transform: translate3d(133%, 0, 0);
+	transition: all linear 240ms;
+	width: 80px;
+}
+
+.bottom-active2 {
+	transform: translate3d(167%, 0, 0);
+	transition: all linear 240ms;
+	width: 150px;
+}
+
+.bottom-active3 {
+	transform: translate3d(580%, 0, 0);
+	transition: all linear 240ms;
+	width: 80px;
+}
+
+.bottom-active4 {
+	transform: translate3d(508%, 0, 0);
+	transition: all linear 240ms;
+	width: 120px;
+}
+
 /* Footer */
 /* Section .clients-slider */
 /* .clients-slider {
