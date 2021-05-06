@@ -151,7 +151,7 @@ nav li a {
 }
 
 /* Bottom line for active headdings */
-.heading-wrapper ul {
+/* .heading-wrapper ul {
 	position: relative;
 }
 
@@ -164,33 +164,37 @@ nav li a {
 	border-radius: 25px;
 }
 
-.bottom-active {
+.bottom-active1 {
 	transform: translate3d(0%, 0, 0);
 	transition: all linear 240ms;
 }
 
-.bottom-active1 {
+.bottom-active2 {
 	transform: translate3d(133%, 0, 0);
 	transition: all linear 240ms;
 	width: 80px;
 }
 
-.bottom-active2 {
+.bottom-active3 {
 	transform: translate3d(167%, 0, 0);
 	transition: all linear 240ms;
 	width: 150px;
 }
 
-.bottom-active3 {
+.bottom-active4 {
 	transform: translate3d(580%, 0, 0);
 	transition: all linear 240ms;
 	width: 80px;
 }
 
-.bottom-active4 {
+.bottom-active5 {
 	transform: translate3d(508%, 0, 0);
 	transition: all linear 240ms;
 	width: 120px;
+} */
+
+.active {
+	border-bottom: 3px solid white;
 }
 
 /* Footer */
