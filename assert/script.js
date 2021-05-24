@@ -1,25 +1,17 @@
 // For hamburger-menu and hamburger-menu-exit
-// const hamburgerBtn = document.getElementById('hamburger-cta');
-// const nav = document.querySelector('nav');
-// const hamburgerBtnExit = document.getElementById('hamburger-exit-cta');
+const hamburgerBtn = document.getElementById('hamburger-cta');
+const nav = document.querySelector('nav');
+const hamburgerBtnExit = document.getElementById('hamburger-exit-cta');
 
-// hamburgerBtn.addEventListener('click', () => {
-// 	nav.classList.add('show-manu');
-// });
-
-// hamburgerBtnExit.addEventListener('click', () => {
-// 	nav.classList.remove('show-manu');
-// });
-
-$(document).ready(function () {
-	$('#hamburger-cta').click(function () {
-		$('nav').addClass('show-manu');
+if (hamburgerBtn != null && hamburgerBtnExit != null) {
+	hamburgerBtn.addEventListener('click', () => {
+		nav.classList.add('show-manu');
 	});
 
-	$('#hamburger-exit-cta').click(function () {
-		$('nav').removeClass('show-manu');
+	hamburgerBtnExit.addEventListener('click', () => {
+		nav.classList.remove('show-manu');
 	});
-});
+}
 
 // For clients slider
 $('.clients-slider').slick({
@@ -93,29 +85,57 @@ $('.clients-slider').slick({
 // 	});
 // });
 
+// Jquery for active headings and show videos according to the active heading
 $(document).ready(function () {
 	$('.heading-one').click(function () {
 		$('.heading-one').addClass('active');
 		$('.heading-two, .heading-three, .heading-four, .heading-five').removeClass('active');
+		$('.tvc').addClass('video-active');
+		$('.digital, .documentary, .events, .corporate').removeClass('video-active');
 	});
 
 	$('.heading-two').click(function () {
 		$('.heading-two').addClass('active');
 		$('.heading-one, .heading-three, .heading-four, .heading-five').removeClass('active');
+		$('.digital').addClass('video-active');
+		$('.tvc, .documnentary, .events, .corporate').removeClass('video-active');
 	});
 
 	$('.heading-three').click(function () {
 		$('.heading-three').addClass('active');
 		$('.heading-one, .heading-two, .heading-four, .heading-five').removeClass('active');
+		$('.documentary').addClass('video-active');
+		$('.tvc, .digital, .events, .corporate').removeClass('video-active');
 	});
 
 	$('.heading-four').click(function () {
 		$('.heading-four').addClass('active');
 		$('.heading-one, .heading-two, .heading-three, .heading-five').removeClass('active');
+		$('.events').addClass('video-active');
+		$('.tvc, .digital, .documentary, .corporate').removeClass('video-active');
 	});
 
 	$('.heading-five').click(function () {
 		$('.heading-five').addClass('active');
 		$('.heading-one, .heading-two, .heading-three, .heading-four').removeClass('active');
+		$('.corporate').addClass('video-active');
+		$('.tvc, .digital, .documentary, .events').removeClass('video-active');
 	});
+});
+
+// Play video on mouse horver
+$(document).ready(function () {
+	var nowPlaying = 'none';
+
+	$('.our-work-video-wrapper .vidcontainer').hover(
+		function () {
+			nowPlaying = $(this).find('iframe').attr('src');
+			$(this)
+				.find('iframe')
+				.attr('src', nowPlaying + '&autoplay=1');
+		},
+		function () {
+			$(this).find('iframe').attr('src', nowPlaying);
+		}
+	);
 });

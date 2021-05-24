@@ -90,8 +90,24 @@ nav li a {
 }
 
 /* Section feature-video */
-.feature-video video {
+.vidwrapper {
 	width: 100%;
+}
+
+.vidcontainer {
+	width: 100%;
+	max-width: 100%;
+	height: 0;
+	padding-bottom: 56.25%; /* 720/1280 */
+	position: relative;
+}
+
+.vidcontainer iframe {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 .feature-video .row {
@@ -104,7 +120,7 @@ nav li a {
 
 .feature-video .text-col-wrapper .text-wrapper {
 	position: absolute;
-	top: 50%;
+	top: 40%;
 	right: 50%;
 	transform: translate(50%, -50%);
 }
@@ -195,6 +211,22 @@ nav li a {
 
 .active {
 	border-bottom: 3px solid white;
+}
+
+.our-work-video-wrapper {
+	margin-top: 50px;
+}
+
+.our-work-video-wrapper .tvc,
+.digital,
+.documentary,
+.events,
+.corporate {
+	display: none;
+}
+
+.our-work-video-wrapper .video-active {
+	display: block;
 }
 
 /* Footer */
