@@ -98,7 +98,7 @@ $(document).ready(function () {
 		$('.heading-two').addClass('active');
 		$('.heading-one, .heading-three, .heading-four, .heading-five').removeClass('active');
 		$('.digital').addClass('video-active');
-		$('.tvc, .documnentary, .events, .corporate').removeClass('video-active');
+		$('.tvc, .documentary, .events, .corporate').removeClass('video-active');
 	});
 
 	$('.heading-three').click(function () {
@@ -123,19 +123,33 @@ $(document).ready(function () {
 	});
 });
 
-// Play video on mouse horver
+// To show the hidden embed videos on mouseenter
 $(document).ready(function () {
-	var nowPlaying = 'none';
-
-	$('.our-work-video-wrapper .vidcontainer').hover(
-		function () {
-			nowPlaying = $(this).find('iframe').attr('src');
-			$(this)
-				.find('iframe')
-				.attr('src', nowPlaying + '&autoplay=1');
-		},
-		function () {
-			$(this).find('iframe').attr('src', nowPlaying);
-		}
-	);
+	$(document)
+		.on('mouseenter', '.vidcontainer', function () {
+			$($(this).data('target')).show();
+		})
+		.on('mouseleave', '.vidcontainer', function () {
+			$($(this).data('target')).hide();
+		});
 });
+
+// Play YouTube embed videos on mouse horver
+function onYouTubeIframeAPIReady() {
+	$('div[name="vp"]').each(function () {
+		let vid = $(this).attr('videoId');
+		let player = new YT.Player(this, {
+			videoId: vid,
+		});
+	});
+}
+
+Mouseover = (el) => {
+	let yt_object = YT.get(el.id);
+	yt_object.playVideo();
+};
+
+Mouseout = (el) => {
+	let yt_object = YT.get(el.id);
+	yt_object.pauseVideo();
+};
