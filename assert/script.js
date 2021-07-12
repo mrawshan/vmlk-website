@@ -19,7 +19,7 @@ $('.clients-slider').slick({
 	slidesToScroll: 1,
 	dots: false,
 	arrow: true,
-	autoplay: true,
+	autoplay: false,
 	autoplaSpeed: 2000,
 	infinite: true,
 	responsive: [
@@ -153,3 +153,106 @@ Mouseout = (el) => {
 	let yt_object = YT.get(el.id);
 	yt_object.pauseVideo();
 };
+
+// Directors
+let directors = [
+	{
+		name: 'Minalee Madanayake',
+		image: '/assert/images/directors/img-minalee-madanayake.png',
+		instagram: 'https://www.instagram.com/mohamadrawshan/',
+		facebook: 'https://www.instagram.com/mohamadrawshan/',
+		bodyText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis debitis fugiat',
+		showreel: 'https://youtu.be/a6xGxx8AJeM',
+	},
+	{
+		name: 'Dulanka Weraduwage',
+		image: 'https://i.pinimg.com/originals/98/c2/8d/98c28d7e583ce4f160ccb648e7590998.jpg',
+		instagram: '#',
+		facebook: '#',
+		bodyText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis debitis fugiat',
+		showreel: 'https://youtu.be/a6xGxx8AJeM',
+	},
+	{
+		name: 'Chrishan Ranjan',
+		image: 'https://www.clipartmax.com/png/middle/343-3431341_clip-tag-id-card-employee-id-icon.png',
+		instagram: '#',
+		facebook: '#',
+		bodyText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis debitis fugiat',
+		showreel: 'https://youtu.be/a6xGxx8AJeM',
+	},
+	{
+		name: 'Cjay Davs',
+		image: 'https://www.clipartmax.com/png/middle/343-3431341_clip-tag-id-card-employee-id-icon.png',
+		instagram: '#',
+		facebook: '#',
+		bodyText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis debitis fugiat',
+		showreel: 'https://youtu.be/a6xGxx8AJeM',
+	},
+	{
+		name: 'Asanka Ratnayake',
+		image: 'https://www.clipartmax.com/png/middle/343-3431341_clip-tag-id-card-employee-id-icon.png',
+		instagram: '#',
+		facebook: '#',
+		bodyText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis debitis fugiat',
+		showreel: 'https://youtu.be/a6xGxx8AJeM',
+	},
+	{
+		name: 'Muditha Bhagya',
+		image: 'https://www.clipartmax.com/png/middle/343-3431341_clip-tag-id-card-employee-id-icon.png',
+		instagram: '#',
+		facebook: '#',
+		bodyText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis debitis fugiat',
+		showreel: 'https://youtu.be/a6xGxx8AJeM',
+	},
+];
+
+directors.forEach(function (director) {
+	//Create directors name list
+	let directorsNameList = document.createElement('ul');
+	let li = document.createElement('li');
+	li.textContent = director.name;
+	directorsNameList.appendChild(li);
+	document.getElementById('directors-name').appendChild(directorsNameList);
+	//When the director name was clicked
+	li.addEventListener('click', function () {
+		//Underline the director name
+
+		//Hide the VMLK logo
+		let dPLogo = document.getElementById('hide-element');
+		dPLogo.classList.add('hide');
+
+		//Director image
+		let directorImage = document.getElementById('director-image');
+		directorImage.src = director.image; //Director image is hidden until the  user click the director
+		directorImage.classList.remove('hide');
+
+		//Instagram and Facebook icon
+		let instagram = document.getElementById('director-instagram');
+		instagram.href = director.instagram;
+		console.log(instagram.href);
+
+		let facebook = document.getElementById('director-facebook');
+		facebook.href = director.facebook;
+		console.log(facebook.href);
+
+		let socialIcon = document.getElementById('director-social-icon');
+		socialIcon.classList.remove('hide');
+		//Director body text
+		let bodyText = document.getElementById('director-body-text');
+		bodyText.textContent = director.bodyText;
+	});
+});
+
+// function myFunction() {
+// 	directors.forEach(function (director) {
+// 		//Create director image
+// 		let directorImage = document.createElement('img');
+// 		directorImage.src = director.image;
+// 		document.getElementById('director-image').appendChild(directorImage);
+
+// 		//Create director body text
+// 		let bodyText = document.createElement('p');
+// 		bodyText.textContent = director.bodyText;
+// 		document.getElementById('director-body-text').appendChild(bodyText);
+// 	});
+// }

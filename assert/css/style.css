@@ -12,7 +12,7 @@ body {
 	color: white;
 }
 
-/* Section showreel */
+/*-----------Page: [index] Section showreel ----------*/
 .showreel video {
 	width: 100%;
 }
@@ -133,8 +133,8 @@ nav li a {
 	right: 40%;
 }
 
-/* Section our-work */
-.our-work h1 {
+/*---------- Section our-work ----------*/
+.our-work .heading1 {
 	text-align: center;
 	margin-top: 50px;
 	margin-bottom: 30px;
@@ -223,6 +223,115 @@ nav li a {
 
 .vidcontainer .embed-video {
 	display: none;
+}
+
+/*---------- Section Directors ----------*/
+.directors .heading1 {
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 30px;
+	font-size: 4rem;
+	font-weight: 600;
+}
+
+.directors .col-4 {
+	border-right: 3px solid white;
+}
+
+.directors .directors-name-wrapper {
+	position: relative;
+}
+
+.directors .directors-name-wrapper #directors-name {
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	transform: translate(50%, -50%);
+	width: fit-content;
+}
+
+.directors .col-4 ul {
+	margin: 0;
+	padding: 0;
+	font-size: 25px;
+}
+
+.directors .col-4 ul li {
+	width: fit-content;
+}
+
+.directors .col-8 {
+	position: relative;
+}
+
+.directors .col-8 .wrapper-logo {
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	transform: translate(50%, -50%);
+}
+
+.directors .col-8 .wrapper-logo h1 {
+	font-size: 5em;
+	font-weight: 800;
+	letter-spacing: 10px;
+}
+
+.directors .row .col-8 {
+	height: 450px;
+	overflow: scroll;
+}
+
+.directors .image-box {
+	width: 250px;
+	margin-left: 80px;
+	display: inline-block;
+}
+
+.directors .image-box img {
+	width: 100%;
+	height: 400px;
+}
+
+.directors .social-icon-wrapper {
+	width: fit-content;
+	margin-left: 155px;
+	margin-top: 5px;
+}
+
+.directors .social-icon-wrapper > a {
+	padding: 3px;
+}
+
+.directors .text-box {
+	width: 400px;
+	position: absolute;
+	left: 40%;
+	top: 20%;
+	text-align: center;
+}
+
+/*---------- Section blog ----------*/
+.blog-body {
+	background-color: white;
+	color: black;
+}
+
+.blog h1 {
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 30px;
+	font-size: 4rem;
+	font-weight: 600;
+}
+
+.blog img {
+	width: 100%;
+}
+
+.blog p {
+	text-align: center;
+	margin-top: 8px;
 }
 
 /* Footer */
@@ -337,4 +446,8 @@ a {
 	padding-left: 10px;
 	padding-right: 10px;
 	position: relative;
+}
+
+.hide {
+	display: none;
 }
