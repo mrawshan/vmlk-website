@@ -18,13 +18,19 @@
 		<!-- Font Awesome stylesheet -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 
+		<!-- Animation on scroll -->
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+		<!-- Animate -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 		<!-- My stylesheet -->
 		<link rel="stylesheet" href="./assert/css/style.css" />
 	</head>
 	<body class="index-body">
 		<!-- Section showreel -->
 		<section class="showreel">
-			<video autoplay="true" loop="true" muted="true">
+			<video loop="true" muted="true" autoplay="true">
 				<source src="https://uploads-ssl.webflow.com/5ce7c4cbfc540b8234616ce8/5e2816a3bdeaef3c72babe41_LEFT_SHOWREEL_BACKGROUND_SITE_JANV2020-transcode.mp4" data-wf-ignore="true" />
 				<source src="https://uploads-ssl.webflow.com/5ce7c4cbfc540b8234616ce8/5e2816a3bdeaef3c72babe41_LEFT_SHOWREEL_BACKGROUND_SITE_JANV2020-transcode.webm" data-wf-ignore="true" />
 			</video>
@@ -39,28 +45,31 @@
 					</a>
 				</div>
 
-				<img id="hamburger-cta" class="hamburger-menu" src="./assert//images/img-menu.svg" alt="Open Navigation" />
-
-				<nav>
-					<img id="hamburger-exit-cta" class="hamburger-menu-exit" src="./assert/images/img-exit.svg" alt="Closs Navigation" />
-					<ul>
-						<li><a href="our_work.html">OUR WORK</a></li>
-						<li><a href="directors.html">DIRECTORS</a></li>
-						<li><a href="blog.html">BLOG</a></li>
-						<li><a href="#">ABOUT</a></li>
-						<li><a href="#">CONTACT</a></li>
-						<li><a href="#">CAREERS</a></li>
-					</ul>
-				</nav>
+				<!-- Open navigation button -->
+				<img class="open-navigation" src="./assert//images/img-menu.svg" alt="Open Navigation" />
 			</div>
 		</div>
+
+		<!-- Menu items -->
+		<nav>
+			<!-- Closs navigation button -->
+			<img class="closs-navigation hide" src="./assert/images/img-exit.svg" alt="Closs Navigation" />
+			<ul class="nav-link hide">
+				<li><a href="our_work.html">OUR WORK</a></li>
+				<li><a href="blog.html">BLOG</a></li>
+				<li><a href="directors.html">DIRECTORS</a></li>
+				<li><a href="#">ABOUT</a></li>
+				<li><a href="#">CONTACT</a></li>
+				<li><a href="#">CAREERS</a></li>
+			</ul>
+		</nav>
 
 		<!-- Section feature-video -->
 		<section class="feature-video">
 			<div class="container">
 				<!-- Video one -->
-				<div class="row">
-					<div class="col-6">
+				<div class="row" data-aos="fade-right">
+					<div class="col-md-6">
 						<div class="vidwrapper">
 							<div class="vidcontainer">
 								<iframe src="https://www.youtube.com/embed/sJGVcb5fn2c?playlist=sJGVcb5fn2c&loop=1&autoplay=1&mute=1&controls=0"> </iframe>
@@ -68,7 +77,7 @@
 						</div>
 					</div>
 
-					<div class="col-6 text-col-wrapper">
+					<div class="col-md-6 text-col-wrapper">
 						<div class="text-wrapper">
 							<h2>Daraz Sri Lanka</h2>
 							<h4>Life at Daraz</h4>
@@ -76,14 +85,14 @@
 						</div>
 					</div>
 
-					<div class="col-6 img-col-wrapper-right">
+					<div class="col-md-6 img-col-wrapper-right">
 						<img src="./assert/images/img-feature-video1.jpeg" alt="" />
 					</div>
 				</div>
 
 				<!-- Video two -->
-				<div class="row">
-					<div class="col-6 text-col-wrapper">
+				<div class="row" data-aos="fade-left">
+					<div class="col-md-6 text-col-wrapper">
 						<div class="text-wrapper">
 							<h2>Windforce</h2>
 							<h4>Corporate Video</h4>
@@ -91,7 +100,7 @@
 						</div>
 					</div>
 
-					<div class="col-6">
+					<div class="col-md-6">
 						<div class="vidwrapper">
 							<div class="vidcontainer">
 								<iframe src="https://www.youtube.com/embed/nJTsbZojero?playlist=nJTsbZojero&loop=1&autoplay=1&mute=1&controls=0"> </iframe>
@@ -99,14 +108,14 @@
 						</div>
 					</div>
 
-					<div class="col-6 img-col-wrapper-left">
+					<div class="col-md-6 img-col-wrapper-left">
 						<img src="./assert/images/img-feature-video2.jpeg" alt="" />
 					</div>
 				</div>
 
 				<!-- Video three -->
-				<div class="row">
-					<div class="col-6">
+				<div class="row" data-aos="fade-right">
+					<div class="col-md-6">
 						<div class="vidwrapper">
 							<div class="vidcontainer">
 								<iframe src="https://www.youtube.com/embed/6JutnFIUAwU?playlist=6JutnFIUAwU&loop=1&autoplay=1&mute=1&controls=0"> </iframe>
@@ -114,7 +123,7 @@
 						</div>
 					</div>
 
-					<div class="col-6 text-col-wrapper">
+					<div class="col-md-6 text-col-wrapper">
 						<div class="text-wrapper">
 							<h2>Daraz Sri Lanka</h2>
 							<h4>Life at Daraz</h4>
@@ -122,14 +131,14 @@
 						</div>
 					</div>
 
-					<div class="col-6 img-col-wrapper-right">
+					<div class="col-md-6 img-col-wrapper-right">
 						<img src="./assert/images/img-feature-video3.jpeg" alt="" />
 					</div>
 				</div>
 
 				<!-- Video four -->
-				<div class="row">
-					<div class="col-6 text-col-wrapper">
+				<div class="row" data-aos="fade-left">
+					<div class="col-md-6 text-col-wrapper">
 						<div class="text-wrapper">
 							<h2>Daraz Sri Lanka</h2>
 							<h4>Life at Daraz</h4>
@@ -137,7 +146,7 @@
 						</div>
 					</div>
 
-					<div class="col-6">
+					<div class="col-md-6">
 						<div class="vidwrapper">
 							<div class="vidcontainer">
 								<iframe src="https://www.youtube.com/embed/8_c_FA6zF98?playlist=8_c_FA6zF98&loop=1&autoplay=1&mute=1&controls=0"> </iframe>
@@ -145,14 +154,14 @@
 						</div>
 					</div>
 
-					<div class="col-6 img-col-wrapper-left">
+					<div class="col-md-6 img-col-wrapper-left">
 						<img src="./assert/images/img-feature-video4.jpeg" alt="" />
 					</div>
 				</div>
 
 				<!-- Video five -->
-				<div class="row">
-					<div class="col-6">
+				<div class="row" data-aos="fade-right">
+					<div class="col-md-6">
 						<div class="vidwrapper">
 							<div class="vidcontainer">
 								<iframe src="https://www.youtube.com/embed/xZX5uUNUXIk?playlist=xZX5uUNUXIk&loop=1&autoplay=1&mute=1&controls=0"> </iframe>
@@ -160,7 +169,7 @@
 						</div>
 					</div>
 
-					<div class="col-6 text-col-wrapper">
+					<div class="col-md-6 text-col-wrapper">
 						<div class="text-wrapper">
 							<h2>Daraz Sri Lanka</h2>
 							<h4>Life at Daraz</h4>
@@ -192,7 +201,7 @@
 				<section class="footer-menu">
 					<div class="container">
 						<div class="row">
-							<div class="col">
+							<div class="col-12 col-md-6 col-lg-3">
 								<div class="wrapper-logo">
 									<a href="index.html">
 										<h1>VMLK <span class="sub-logo text-center">VIRAL MEDIA</span></h1>
@@ -208,7 +217,7 @@
 								</address>
 							</div>
 
-							<div class="col text-center">
+							<div class="col-12 col-md-6 col-lg-3 text-center">
 								<h4><u>Quick Links</u></h4>
 								<ul>
 									<li><a href="index.html">Home</a></li>
@@ -218,7 +227,7 @@
 								</ul>
 							</div>
 
-							<div class="col text-center">
+							<div class="col-12 col-md-6 col-lg-3 text-center">
 								<h4><u>Opportunities</u></h4>
 								<ul>
 									<li><a href="#">Partners</a></li>
@@ -226,7 +235,7 @@
 								</ul>
 							</div>
 
-							<div class="col text-center">
+							<div class="col-12 col-md-6 col-lg-3 text-center">
 								<h4><u>Social Links</u></h4>
 								<div class="social-icon-wrapper">
 									<a href="#"><i class="fab fa-instagram fa-3x"></i></a>
@@ -247,6 +256,14 @@
 		<!-- Slick jquery and javascript for clients slider -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+		<!-- Animation on scroll Javascript -->
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init({
+				duration: 1000,
+			});
+		</script>
 
 		<!-- My javascript -->
 		<script type="text/javascript" src="./assert/script.js"></script>
