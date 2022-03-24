@@ -5,11 +5,28 @@ const clossNavigation = document.querySelector('.closs-navigation');
 const iframe = document.querySelectorAll('iframe');
 const navLink = document.querySelector('.nav-link');
 const sectionDirectors = document.querySelector('.directors');
+const linkItem = document.querySelectorAll('.link');
 console.log(iframe);
 
 for (let i = 0; i < iframe.length; i++) {
 	iframe[i].loading = 'lazy';
 }
+
+const animationOn = function () {
+	linkItem.forEach((item, i) => {
+		i++;
+		const index = i;
+		item.classList.add(`link${index}`);
+	});
+};
+
+const animationOff = function () {
+	linkItem.forEach((item, i) => {
+		i++;
+		const index = i;
+		item.classList.remove(`link${index}`);
+	});
+};
 
 // Open nav and closs
 const hamburgerMenu = function (openNav, clossNav) {
@@ -19,6 +36,7 @@ const hamburgerMenu = function (openNav, clossNav) {
 			openNav.classList.add('hide');
 			clossNav.classList.remove('hide');
 			navLink.classList.remove('hide');
+			animationOn();
 		});
 
 		clossNav.addEventListener('click', () => {
@@ -26,6 +44,7 @@ const hamburgerMenu = function (openNav, clossNav) {
 			clossNav.classList.add('hide');
 			openNav.classList.remove('hide');
 			navLink.classList.add('hide');
+			animationOff();
 		});
 	}
 };
@@ -214,6 +233,7 @@ const directors = [
 
 // Create directors
 const displayDirectors = function (directors) {
+	// Loop over the directors array
 	directors.forEach(function (director) {
 		//Create directors name list
 		const directorsNameList = document.createElement('ul');
