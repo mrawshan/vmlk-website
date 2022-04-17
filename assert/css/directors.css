@@ -1,0 +1,296 @@
+.directors {
+	position: relative;
+	height: 100vh;
+}
+
+.directors .container {
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	transform: translate(50%, -50%);
+}
+
+.directors .heading1 {
+	text-align: center;
+	padding-bottom: 60px;
+	font-size: 4rem;
+	font-weight: 600;
+}
+
+/* Underline Animation on hover */
+.name {
+	position: relative;
+	cursor: pointer;
+}
+
+.name:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 3px;
+	bottom: -3px;
+	left: 0;
+	background-color: var(--color-primary);
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+
+.name:hover:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+
+.active {
+	border-bottom: 3px solid var(--color-primary);
+}
+
+.directors .directors-name-wrapper::after {
+	content: '';
+	background-color: var(--color-primary);
+	width: 70%;
+	height: 2px;
+	display: block;
+	position: relative;
+	left: 60%;
+	top: 50%;
+	transform: rotate(-90deg);
+}
+
+.directors .directors-name-wrapper {
+	position: relative;
+}
+
+.directors .directors-name-wrapper #directors-name {
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	transform: translate(50%, -50%);
+	width: fit-content;
+}
+
+.directors .directors-name-wrapper ul {
+	margin: 0;
+	padding: 0;
+	font-size: 25px;
+}
+
+.directors .directors-name-wrapper ul li {
+	width: fit-content;
+}
+
+.directors .directors-info-wrapper {
+	position: relative;
+}
+
+.directors .directors-info-wrapper .wrapper-logo {
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	transform: translate(50%, -50%);
+}
+
+.directors .directors-info-wrapper .wrapper-logo h1 {
+	font-size: 5em;
+	font-weight: 800;
+	letter-spacing: 10px;
+}
+
+.directors .row .directors-info-wrapper {
+	height: 450px;
+}
+
+.directors-work-wrapper {
+	position: relative;
+	height: 450px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.work-container {
+	position: absolute;
+	/* Hide the container when the page is loading */
+	visibility: hidden;
+}
+
+.work-container {
+	width: 100%;
+}
+
+.work-container {
+	transition: transform 2.5s, opacity 7s;
+}
+
+.work-hidden {
+	opacity: 0;
+	transform: translateX(59rem);
+}
+
+.directors .image-box {
+	width: 250px;
+	margin-left: 80px;
+}
+
+.directors .image-box img {
+	width: 100%;
+	height: 400px;
+}
+
+.directors .social-icon-wrapper {
+	width: fit-content;
+	margin-left: 155px;
+	margin-top: 5px;
+}
+
+.directors .social-icon-wrapper > a {
+	padding: 3px;
+}
+
+.directors .text-box {
+	width: 400px;
+	position: absolute;
+	left: 40%;
+	top: 5%;
+	text-align: center;
+}
+
+.director-showreel {
+	width: 100%;
+	position: relative;
+	margin-top: 50px;
+}
+
+.director-showreel img,
+.director-showreel video {
+	width: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.director-showreel img {
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	transform: translate(50%, -50%);
+}
+
+.director-work {
+	margin-top: 50px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 1em;
+}
+
+.director-work .vid-container {
+	position: relative;
+}
+
+.director-work .vid-container img {
+	display: block;
+	width: 100%;
+	position: absolute;
+	transition: opacity 0.4s;
+}
+
+.director-work video {
+	width: 100%;
+}
+
+/*----------- Media Queries ----------*/
+@media screen and (max-width: 1388px) {
+	.directors .text-box {
+		left: unset;
+		right: 0;
+	}
+}
+
+@media screen and (max-width: 1207px) {
+	.directors .text-box {
+		width: 250px;
+	}
+}
+
+@media screen and (max-width: 989px) {
+	.directors .text-box {
+		position: unset;
+		display: block;
+		margin-top: 6px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.directors .image-box {
+		width: 250px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.directors .social-icon-wrapper {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.director-showreel img,
+	.director-showreel video {
+		width: 100%;
+	}
+
+	.director-work {
+		grid-template-columns: repeat(1, 1fr);
+		margin-top: 25px;
+	}
+}
+@media screen and (max-width: 768px) {
+	.directors .directors-name-wrapper::after {
+		content: unset;
+	}
+
+	.directors .directors-name-wrapper {
+		width: 100%;
+		position: unset;
+		padding-bottom: 10px;
+	}
+
+	.directors .directors-name-wrapper #directors-name {
+		position: unset;
+		top: unset;
+		right: unset;
+		transform: unset;
+		width: unset;
+	}
+
+	.directors .directors-name-wrapper ul {
+		text-align: center;
+	}
+
+	.directors .directors-name-wrapper ul li {
+		display: inline-block;
+		margin: 5px;
+	}
+
+	.directors .directors-info-wrapper {
+		width: 100%;
+	}
+
+	.directors .container {
+		display: block;
+	}
+}
+@media screen and (max-width: 500px) {
+	.directors {
+		height: unset;
+	}
+
+	.directors .container {
+		position: unset;
+		top: unset;
+		right: unset;
+		transform: unset;
+	}
+
+	.directors .heading1 {
+		font-size: 2rem;
+	}
+}

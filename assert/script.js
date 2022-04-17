@@ -1,93 +1,4 @@
-// For openNavifation and clossNavigation
-const nav = document.querySelector('nav');
-const openNavigation = document.querySelector('.open-navigation');
-const clossNavigation = document.querySelector('.closs-navigation');
-const iframe = document.querySelectorAll('iframe');
-const navLink = document.querySelector('.nav-link');
 const sectionDirectors = document.querySelector('.directors');
-const linkItem = document.querySelectorAll('.link');
-console.log(iframe);
-
-for (let i = 0; i < iframe.length; i++) {
-	iframe[i].loading = 'lazy';
-}
-
-const animationOn = function () {
-	linkItem.forEach((item, i) => {
-		i++;
-		const index = i;
-		item.classList.add(`link${index}`);
-	});
-};
-
-const animationOff = function () {
-	linkItem.forEach((item, i) => {
-		i++;
-		const index = i;
-		item.classList.remove(`link${index}`);
-	});
-};
-
-// Open nav and closs
-const hamburgerMenu = function (openNav, clossNav) {
-	if (openNav !== null && clossNav !== null) {
-		openNav.addEventListener('click', () => {
-			nav.style.height = '100vh';
-			openNav.classList.add('hide');
-			clossNav.classList.remove('hide');
-			navLink.classList.remove('hide');
-			animationOn();
-		});
-
-		clossNav.addEventListener('click', () => {
-			nav.style.height = '0vh';
-			clossNav.classList.add('hide');
-			openNav.classList.remove('hide');
-			navLink.classList.add('hide');
-			animationOff();
-		});
-	}
-};
-hamburgerMenu(openNavigation, clossNavigation);
-
-// For clients slider
-$('.clients-slider').slick({
-	slidesToShow: 5,
-	slidesToScroll: 1,
-	dots: false,
-	arrow: true,
-	autoplay: false,
-	autoplaSpeed: 2000,
-	infinite: true,
-	responsive: [
-		{
-			breakpoint: 1024,
-			settings: {
-				slidesToShow: 3,
-				slidesToScroll: 1,
-				infinite: true,
-				dots: false,
-			},
-		},
-		{
-			breakpoint: 600,
-			settings: {
-				slidesToShow: 2,
-				slidesToScroll: 1,
-			},
-		},
-		{
-			breakpoint: 480,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1,
-			},
-		},
-		// You can unslick at a given breakpoint now by adding:
-		// settings: "unslick"
-		// instead of a settings object
-	],
-});
 
 // For our work page //
 // Select all the list item and the video container
@@ -241,6 +152,7 @@ const displayDirectors = function (directors) {
 		li.textContent = director.name;
 		directorsNameList.appendChild(li);
 		document.getElementById('directors-name').appendChild(directorsNameList);
+
 		//When the director name was clicked
 		li.addEventListener('click', function () {
 			const list = document.getElementsByClassName('active');

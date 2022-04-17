@@ -1,0 +1,215 @@
+:root {
+	--color-primary: #fff;
+	--color-secondary: #000000;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: black;
+	color: var(--color-primary);
+}
+
+/* VMLK logo */
+.wrapper-logo {
+	width: fit-content;
+	color: var(--color-primary);
+}
+
+.wrapper-logo a {
+	text-decoration: none;
+	color: unset;
+}
+
+.wrapper-logo h1 {
+	font-weight: 800;
+	letter-spacing: 10px;
+}
+
+.wrapper-logo .sub-logo {
+	display: block;
+	font-size: 8px;
+	font-weight: 500;
+	letter-spacing: 2px;
+}
+
+/* Section footer-menu */
+.clients-slider div {
+	width: 100%;
+}
+
+.clients-slider img {
+	width: 100%;
+	padding: 30px;
+}
+
+.clients-slider .slick-slide {
+	margin: 15px;
+}
+
+.slick-prev::before {
+	display: none;
+}
+
+.slick-prev {
+	display: none;
+}
+
+.slick-prev {
+	position: relative;
+}
+
+.slick-next:before {
+	content: '\f105';
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 600;
+	font-size: 50px;
+	opacity: 1;
+}
+
+.slick-next {
+	right: 6px;
+}
+
+.clients-slider .item:hover {
+	display: block;
+	transition: all ease 0.3s;
+	transform: scale(1.1) translateY(-5px);
+}
+
+.clients-slider::after {
+	content: '';
+	background-color: var(--color-primary);
+	width: 95%;
+	height: 2px;
+	display: block;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.footer-menu {
+	margin-top: 10px;
+}
+
+.footer-menu .row > *:nth-child(2),
+.footer-menu .row > *:nth-child(3),
+.footer-menu .row > *:nth-child(4) {
+	padding-top: 22px;
+}
+
+.footer-menu address {
+	margin-top: 20px;
+}
+
+.footer-menu ul {
+	padding-left: 0;
+}
+
+.footer-menu .social-icon-wrapper {
+	max-width: 150px;
+	margin: auto;
+}
+
+.footer-menu .social-icon-wrapper a > i {
+	margin: 10px;
+}
+
+/*----------- Utilities (Common scc) ----------*/
+
+.container {
+	max-width: 2000px;
+	margin-bottom: auto;
+	margin-top: 0;
+	overflow: auto;
+	padding: 10px 40px;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-primary);
+}
+
+a:hover {
+	color: var(--color-primary);
+	cursor: pointer;
+}
+
+.tab {
+	padding-left: 4.2em;
+}
+
+/* For embed videos */
+.vidwrapper {
+	width: 100%;
+}
+
+.vidcontainer {
+	width: 100%;
+	max-width: 100%;
+	height: 0;
+	padding-bottom: 56.25%; /* 720/1280 */
+	padding-left: 10px;
+	padding-right: 10px;
+	position: relative;
+}
+
+.hide {
+	visibility: hidden;
+	transition: all 0.5s;
+	opacity: 0;
+}
+
+/* For fadein animation */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/*---------- Media Queries ----------*/
+/* For footer */
+@media screen and (max-width: 767px) {
+	/* .container:not(.navbar .container, .feature-video .container) {
+		padding: 0;
+		overflow-x: hidden;
+		overflow-y: hidden;
+	} */
+
+	.footer .container {
+		padding: 0;
+		overflow-x: hidden;
+		overflow-y: hidden;
+	}
+
+	.footer .clients-slider {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.footer-menu .row:first-child {
+		width: fit-content;
+		margin: auto;
+		text-align: center;
+	}
+	.footer-menu .row .wrapper-logo {
+		width: fit-content;
+		margin: auto;
+	}
+}
