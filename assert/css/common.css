@@ -59,7 +59,7 @@ body {
 	display: none;
 }
 
-.slick-prev {
+/* .slick-prev {
 	position: relative;
 }
 
@@ -69,10 +69,11 @@ body {
 	font-weight: 600;
 	font-size: 50px;
 	opacity: 1;
-}
+} */
 
 .slick-next {
-	right: 6px;
+	/* right: 6px; */
+	display: none;
 }
 
 .clients-slider .item:hover {

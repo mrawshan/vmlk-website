@@ -63,7 +63,8 @@ const revealvideo = function (entries, observer) {
 	entry.target.classList.remove('row--hidden');
 
 	// Remove the row--hidden class on the 2nd and 3rd row's in small screen's
-	let mql = window.matchMedia('(max-width: 768px)');
+	let mql = window.matchMedia('(max-width: 768px)'); // Here we are using matchMedia method to read the screen size
+	console.log(mql);
 
 	const secondRow = () => allVideos[1].classList.remove('row--hidden');
 	const thirdRow = () => allVideos[2].classList.remove('row--hidden');
