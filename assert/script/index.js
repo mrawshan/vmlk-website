@@ -65,12 +65,9 @@ const revealvideo = function (entries, observer) {
 	// Remove the row--hidden class on the 2nd and 3rd row's in small screen's
 	let mql = window.matchMedia('(max-width: 768px)');
 
-	const secondRow = () => allVideos[1].classList.remove('row--hidden');
-	const thirdRow = () => allVideos[2].classList.remove('row--hidden');
-
 	if (mql.matches) {
-		const secondRowTimer = setTimeout(secondRow, 1000);
-		const thirdRowTimer = setTimeout(thirdRow, 1000);
+		allVideos[1].classList.remove('row--hidden');
+		allVideos[2].classList.remove('row--hidden');
 	}
 
 	observer.unobserve(entry.target); // Unobserve the sections (Stop observing)
